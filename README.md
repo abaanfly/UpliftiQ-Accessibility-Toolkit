@@ -2,6 +2,14 @@
 
 Open-source React toolkit for building Deaf-friendly learning platforms.
 
+## 🎥 Demo
+
+![Demo Screenshot 1](./test_reports/artifacts_iter1/frontend_smoke.jpeg) 
+![Demo Screenshot 2](./test_reports/artifacts_iter2/caption_player_controls_and_overlay.jpeg) 
+![Demo Screenshot 3](./test_reports/artifacts_iter2/caption_player_loaded.jpeg)
+![Demo Screenshot 4](./test_reports/artifacts_iter3/caption_player_controls_and_overlay.jpeg)
+![Demo Screenshot 5](./test_reports/artifacts_iter4/docs_hub_validation.jpeg)
+
 ## Mission
 
 UpliftiQ helps developers create learning experiences that do not depend on sound-first interactions. The toolkit centers readable captions, visual signals, stepwise learning, and sign-language-ready video patterns so Deaf and Hard-of-Hearing learners can participate with clarity and confidence.
