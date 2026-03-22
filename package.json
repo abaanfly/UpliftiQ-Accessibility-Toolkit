@@ -1,0 +1,38 @@
+{
+  "name": "upliftiq-accessibility-toolkit",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upliftiq/upliftiq-accessibility-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/upliftiq/upliftiq-accessibility-toolkit/issues"
+  },
+  "homepage": "https://github.com/upliftiq/upliftiq-accessibility-toolkit#readme",
+  "keywords": [
+    "accessibility",
+    "captions",
+    "deaf-friendly",
+    "education",
+    "sign-language",
+    "react"
+  ],
+  "packageManager": "yarn@1.22.22",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "dev:demo": "yarn workspace @upliftiq/demo-learning-platform dev",
+    "build:packages": "yarn workspace @upliftiq/caption-player build && yarn workspace @upliftiq/deaf-ui build && yarn workspace @upliftiq/isl-tools build",
+    "build:demo": "yarn workspace @upliftiq/demo-learning-platform build",
+    "build": "node ./scripts/release-smoke.mjs --build && yarn build:packages && yarn build:demo",
+    "test": "node ./scripts/release-smoke.mjs --test",
+    "release:check": "yarn build && yarn test",
+    "publish:caption-player": "npm publish ./packages/caption-player --access public",
+    "publish:deaf-ui": "npm publish ./packages/deaf-ui --access public",
+    "publish:isl-tools": "npm publish ./packages/isl-tools --access public"
+  }
+}
