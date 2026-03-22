@@ -145,4 +145,10 @@
     "Implement 'prefers-reduced-motion' media query for all animations."
   ],
   "universal_guidelines": [
-  
+      "Do not use subtle gradients. Use flat, high-contrast colors.",
+    "Avoid 'Inter' font for headings. Use 'Work Sans' or 'Outfit'.",
+    "Spacing must be generous (p-8+).",
+    "Every video element MUST have a text alternative visible.",
+    "Test all colors for WCAG AAA compliance."
+  ]
+}
