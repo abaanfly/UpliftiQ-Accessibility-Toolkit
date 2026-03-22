@@ -1,0 +1,148 @@
+{
+  "project_name": "UpliftiQ Accessibility Toolkit",
+  "design_philosophy": {
+    "name": "Tactical Clarity",
+    "description": "A fusion of Swiss International Style and High-Accessibility standards. Prioritizes legibility, visual signaling, and predictable interactions over decoration. Every pixel must serve the purpose of communication without sound.",
+    "emotion": "Empowering, Clear, Trustworthy",
+    "archetype": "Swiss & High-Contrast"
+  },
+  "typography": {
+    "font_family_headings": "Work Sans, sans-serif",
+    "font_family_body": "IBM Plex Sans, sans-serif",
+    "font_family_code": "JetBrains Mono, monospace",
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed",
+      "caption": "text-lg font-medium leading-normal",
+      "small": "text-sm font-medium tracking-wide uppercase"
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Signal Blue",
+      "value": "#0044CC",
+      "description": "High contrast blue for primary actions. WCAG AAA against white."
+    },
+    "secondary": {
+      "name": "Safety Orange",
+      "value": "#F97316",
+      "description": "Used for focus states and visual alerts. distinct from error red."
+    },
+    "background": {
+      "default": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "contrast": "#111111"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#334155",
+      "inverse": "#FFFFFF"
+    },
+    "status": {
+      "success": "#15803D",
+      "warning": "#B45309",
+      "error": "#DC2626",
+      "info": "#1D4ED8"
+    }
+  },
+  "layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing": {
+      "section": "py-16 md:py-24",
+      "component": "p-6 md:p-8",
+      "gap": "gap-8"
+    },
+    "grid_modes": {
+      "bento_dashboard": "grid grid-cols-1 md:grid-cols-3 gap-6",
+      "learning_card": "grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+    }
+  },
+  "components": [
+    {
+      "name": "CaptionPlayer",
+      "path": "packages/caption-player/src/CaptionPlayer.jsx",
+      "description": "A video player where captions are the hero, not an afterthought.",
+      "visual_rules": [
+        "Video container should have a sharp 2px border in primary color.",
+        "Captions must be displayed OUTSIDE the video or in a dedicated high-contrast box (Black bg, White text, text-xl).",
+        "Transcript panel must be side-by-side with video on desktop.",
+        "Active transcript line must be highlighted with a 'Safety Orange' left border and light background."
+      ]
+    },
+    {
+      "name": "VisualAlert",
+      "path": "packages/deaf-ui/src/VisualAlert.jsx",
+      "description": "Replaces audio beeps with visual flashes.",
+      "visual_rules": [
+        "Use a top-bar flash or full-screen border flash animation.",
+        "Must include a distinct ICON that represents the sound (e.g., Bell, Error, Timer).",
+        "Animation: 'animate-pulse' or custom keyframe flash.",
+        "High contrast border: border-4 border-orange-500."
+      ]
+    },
+    {
+      "name": "SignCard",
+      "path": "packages/isl-tools/src/SignCard.jsx",
+      "description": "Learning card for ISL signs.",
+      "visual_rules": [
+        "Split layout: Video on Left/Top, Word & Description on Right/Bottom.",
+        "Video must loop automatically (muted).",
+        "Word must be massive (text-4xl) and font-bold.",
+        "Include a 'Slow Motion' toggle button (pill shaped)."
+      ]
+    },
+    {
+      "name": "VisualTimer",
+      "path": "packages/deaf-ui/src/VisualTimer.jsx",
+      "description": "Countdown timer using visual fills rather than just numbers.",
+      "visual_rules": [
+        "Circular progress or linear bar that changes color as time depletes (Green -> Yellow -> Red).",
+        "Striped background pattern for texture (accessibility)."
+      ]
+    },
+    {
+      "name": "LessonPage",
+      "path": "examples/demo-learning-platform/src/pages/LessonPage.jsx",
+      "description": "Demo page combining all tools.",
+      "visual_rules": [
+        "Use the 'Bento' grid layout.",
+        "Hero section: CaptionPlayer.",
+        "Sidebar: VisualTimer and Progress.",
+        "Content: List of SignCards."
+      ]
+    }
+  ],
+  "assets": {
+    "image_urls": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1772419186959-fdb8cc37e149?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxzaWduJTIwbGFuZ3VhZ2UlMjB0ZWFjaGVyJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc3MzE0NTkwMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Classroom setting for hero background"
+      },
+      {
+        "category": "sign_learning",
+        "url": "https://images.unsplash.com/photo-1698993001180-8654ab29032a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxzaWduJTIwbGFuZ3VhZ2UlMjB0ZWFjaGVyJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc3MzE0NTkwMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Student signing"
+      },
+      {
+        "category": "visual_symbols",
+        "url": "https://images.unsplash.com/photo-1675917112376-9ecf3b46fc49?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHw0fHx2aXN1YWwlMjBsZWFybmluZyUyMGVkdWNhdGlvbiUyMHN5bWJvbHN8ZW58MHx8fHwxNzczMTQ1OTA0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Visual learning concept"
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "preferred_icons": ["HandMetal", "Eye", "Type", "VolumeX", "BellRing", "Play", "Pause", "Turtle", "Rabbit"]
+    }
+  },
+  "instructions_to_main_agent": [
+    "Initialize the new packages in the 'packages/' directory as requested.",
+    "Although the problem statement mentions TypeScript, use .jsx extension for files if the environment is strictly JS, but prefer .tsx if you can configure it. The guidelines use .jsx to be safe.",
+    "Ensure all interactive elements have visible focus states (ring-4 ring-orange-500).",
+    "Use 'rem' units for font sizes to respect user browser settings.",
+    "Implement 'prefers-reduced-motion' media query for all animations."
+  ],
+  "universal_guidelines": [
+  
