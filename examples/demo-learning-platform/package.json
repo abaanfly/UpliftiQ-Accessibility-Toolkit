@@ -1,0 +1,26 @@
+{
+  "name": "@upliftiq/demo-learning-platform",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "yarn workspace @upliftiq/caption-player build && yarn workspace @upliftiq/deaf-ui build && yarn workspace @upliftiq/isl-tools build",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@upliftiq/caption-player": "1.0.0",
+    "@upliftiq/deaf-ui": "1.0.0",
+    "@upliftiq/isl-tools": "1.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}
