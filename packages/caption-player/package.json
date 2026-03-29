@@ -1,0 +1,50 @@
+{
+  "name": "@upliftiq/caption-player",
+  "version": "1.0.0",
+  "description": "Accessible React caption player with WebVTT, transcript search, language switching, and sign-language overlay support.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "keywords": [
+    "captions",
+    "webvtt",
+    "accessibility",
+    "deaf-friendly",
+    "react-player"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upliftiq/upliftiq-accessibility-toolkit.git",
+    "directory": "packages/caption-player"
+  },
+  "homepage": "https://github.com/upliftiq/upliftiq-accessibility-toolkit/tree/main/packages/caption-player",
+  "bugs": {
+    "url": "https://github.com/upliftiq/upliftiq-accessibility-toolkit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json && node ../../scripts/copy-package-assets.mjs caption-player",
+    "test": "node ../../scripts/release-smoke.mjs --package caption-player --test"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}
