@@ -1,0 +1,39 @@
+{
+  "name": "@upliftiq/deaf-ui",
+  "version": "1.0.0",
+  "description": "Visual-first React UI components for Deaf-friendly learning platforms.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upliftiq/upliftiq-accessibility-toolkit.git",
+    "directory": "packages/deaf-ui"
+  },
+  "homepage": "https://github.com/upliftiq/upliftiq-accessibility-toolkit/tree/main/packages/deaf-ui",
+  "bugs": {
+    "url": "https://github.com/upliftiq/upliftiq-accessibility-toolkit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json && node ../../scripts/copy-package-assets.mjs deaf-ui"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}
